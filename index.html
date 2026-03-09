@@ -3,478 +3,1563 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GROW BD — প্রকৃতির সেরা দোকান</title>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<title>GROW BD 🌿</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
-:root{--g:#0a4a2e;--dg:#071f14;--mg:#1a6b3a;--cream:#f8f5e6;--gold:#c9a84c;--light:#f0f7f3;--acc:#2d8653;}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Hind Siliguri',sans-serif;background:#eef3ee;color:#1a1a1a;}
-.topbar{background:var(--dg);text-align:center;padding:7px;font-size:12px;color:var(--cream);letter-spacing:1px;border-bottom:1px solid var(--gold);}
-.topbar span{color:var(--gold);}
-header{background:linear-gradient(135deg,var(--dg) 0%,var(--g) 100%);position:sticky;top:0;z-index:900;box-shadow:0 4px 24px rgba(0,0,0,.4);}
-.hrow{display:flex;align-items:center;gap:14px;padding:13px 20px;flex-wrap:wrap;}
-.logo-wrap{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.logo-box{background:linear-gradient(135deg,var(--gold),#e8c97a);border-radius:10px;padding:6px 14px;font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--dg);letter-spacing:3px;line-height:1;display:flex;flex-direction:column;align-items:center;box-shadow:0 3px 12px rgba(201,168,76,.4);}
-.logo-box small{font-family:'Hind Siliguri',sans-serif;font-size:8px;letter-spacing:5px;color:var(--g);font-weight:700;}
-.logo-sub{color:#a8d5b5;font-size:11px;}
-.srch{flex:1;max-width:480px;display:flex;background:rgba(255,255,255,.12);border-radius:25px;overflow:hidden;border:1.5px solid rgba(255,255,255,.2);}
-.srch:focus-within{border-color:var(--gold);}
-.srch input{flex:1;padding:9px 16px;border:none;outline:none;font-family:'Hind Siliguri',sans-serif;font-size:14px;background:transparent;color:#fff;}
-.srch input::placeholder{color:rgba(255,255,255,.6);}
-.srch button{background:var(--gold);color:var(--dg);border:none;padding:0 18px;cursor:pointer;font-size:15px;font-weight:700;}
-.hbtns{display:flex;gap:8px;margin-left:auto;}
-.hbtn{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.2);color:#fff;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:13px;font-weight:600;transition:.2s;white-space:nowrap;}
-.hbtn:hover{background:rgba(255,255,255,.2);}
-.hbtn.ab{background:linear-gradient(135deg,var(--gold),#e8c97a);color:var(--dg);border-color:transparent;}
-nav{background:rgba(0,0,0,.25);display:flex;overflow-x:auto;padding:0 12px;border-top:1px solid rgba(255,255,255,.08);}
-nav::-webkit-scrollbar{display:none;}
-nav a{color:rgba(255,255,255,.8);text-decoration:none;padding:11px 18px;font-size:13px;font-weight:600;white-space:nowrap;border-bottom:3px solid transparent;transition:.2s;}
-nav a:hover,nav a.on{color:#fff;border-bottom-color:var(--gold);background:rgba(255,255,255,.06);}
-.hero{background:linear-gradient(160deg,var(--dg) 0%,var(--g) 50%,#1a6b3a 100%);padding:60px 20px 50px;text-align:center;position:relative;overflow:hidden;}
-.hero-eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px;}
-.hero-title{font-family:'Bebas Neue',sans-serif;font-size:96px;color:#fff;letter-spacing:16px;line-height:.85;text-shadow:0 4px 40px rgba(0,0,0,.4);}
-.hero-title .dot{color:var(--gold);}
-.hero-tag{color:rgba(255,255,255,.8);font-size:15px;margin:16px 0 28px;line-height:1.6;}
-.hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-.hbadge{background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.4);color:rgba(255,255,255,.9);padding:6px 16px;border-radius:20px;font-size:12px;}
-.ticker-wrap{background:var(--dg);padding:10px 0;overflow:hidden;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);}
-.ticker{display:flex;gap:40px;animation:tick 25s linear infinite;white-space:nowrap;}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.ticker span{font-family:'Bebas Neue',sans-serif;font-size:16px;color:rgba(255,255,255,.7);letter-spacing:3px;}
-.ticker .dot{color:var(--gold);}
-.fbar{background:#fff;padding:12px 20px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #dde8e0;box-shadow:0 2px 12px rgba(0,0,0,.06);}
-.fb{background:var(--light);border:1.5px solid #c8dbc0;color:var(--g);padding:6px 16px;border-radius:20px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:13px;font-weight:600;transition:.2s;}
-.fb:hover,.fb.on{background:var(--g);color:#fff;border-color:var(--g);}
-.main{padding:28px 20px;}
-.stitle{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--dg);letter-spacing:3px;margin-bottom:20px;display:flex;align-items:center;gap:14px;}
-.stitle::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--gold),transparent);}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin-bottom:40px;}
-.pcard{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(10,74,46,.1);transition:.3s;cursor:pointer;position:relative;}
-.pcard:hover{transform:translateY(-8px);box-shadow:0 16px 40px rgba(10,74,46,.18);}
-.pbadge{position:absolute;top:10px;left:10px;background:var(--g);color:#fff;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700;z-index:2;}
-.pbadge.h{background:linear-gradient(135deg,#e67e22,#d35400);}
-.pbadge.s{background:linear-gradient(135deg,#c0392b,#a93226);}
-.pbadge.p{background:linear-gradient(135deg,var(--gold),#b8880a);color:var(--dg);}
-.pimg-wrap{height:195px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:72px;position:relative;}
-.pimg-wrap img{width:100%;height:100%;object-fit:cover;transition:.4s;}
-.pcard:hover .pimg-wrap img{transform:scale(1.06);}
-.pdots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;}
-.pdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);border:1.5px solid var(--g);cursor:pointer;}
-.pdot.on{background:var(--g);}
-.pinfo{padding:14px;}
-.pname{font-size:15px;font-weight:700;color:var(--dg);margin-bottom:4px;line-height:1.3;}
-.pdesc{font-size:11.5px;color:#777;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.ppr{display:flex;align-items:baseline;gap:7px;margin-bottom:5px;}
-.pprice{font-size:20px;font-weight:800;color:var(--g);}
-.pold{font-size:12px;color:#bbb;text-decoration:line-through;}
-.pdel{font-size:11px;color:#999;margin-bottom:10px;}
-.bord{width:100%;background:linear-gradient(135deg,var(--g),var(--mg));color:#fff;border:none;padding:10px;border-radius:9px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:13px;font-weight:700;transition:.2s;display:flex;align-items:center;justify-content:center;gap:6px;}
-.bord:hover{opacity:.9;}
-.bwa{width:100%;margin-top:6px;background:#25D366;color:#fff;border:none;padding:8px;border-radius:9px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:13px;font-weight:600;transition:.2s;display:flex;align-items:center;justify-content:center;gap:5px;text-decoration:none;}
-.bwa:hover{background:#1da851;}
-.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:2000;align-items:center;justify-content:center;padding:14px;}
-.ov.on{display:flex;}
-.modal{background:#fff;border-radius:18px;max-width:820px;width:100%;max-height:90vh;overflow-y:auto;position:relative;}
-.mclose{position:absolute;top:14px;right:16px;background:rgba(0,0,0,.08);border:none;font-size:18px;cursor:pointer;color:#666;z-index:5;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.mbody{padding:24px;}
-.mgal{display:grid;grid-template-columns:1fr 78px;gap:10px;margin-bottom:18px;}
-.mmain{height:310px;border-radius:12px;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:90px;overflow:hidden;}
-.mmain img{width:100%;height:100%;object-fit:cover;}
-.mthumbs{display:flex;flex-direction:column;gap:7px;}
-.mthumb{height:68px;border-radius:9px;background:#f0f7f2;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;border:2px solid transparent;transition:.2s;overflow:hidden;}
-.mthumb img{width:100%;height:100%;object-fit:cover;}
-.mthumb.on{border-color:var(--gold);}
-.mname{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--dg);letter-spacing:1px;margin-bottom:6px;}
-.mprice{font-size:30px;font-weight:800;color:var(--g);margin-bottom:5px;}
-.mdel{background:var(--light);border-radius:9px;padding:10px 14px;margin:10px 0;display:flex;gap:18px;font-size:13px;flex-wrap:wrap;border:1px solid #d4e8d0;}
-.mdesc{font-size:14px;color:#555;line-height:1.75;margin-bottom:16px;}
-.macts{display:flex;gap:9px;flex-wrap:wrap;}
-.macts>*{flex:1;min-width:120px;}
-.bem{flex:1;background:linear-gradient(135deg,#ea4335,#c62828);color:#fff;border:none;padding:10px;border-radius:9px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:13px;font-weight:700;transition:.2s;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px;}
-.oov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:3000;align-items:center;justify-content:center;padding:14px;}
-.oov.on{display:flex;}
-.oform{background:#fff;border-radius:18px;max-width:470px;width:100%;padding:26px;position:relative;max-height:90vh;overflow-y:auto;}
-.otitle{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--dg);letter-spacing:2px;margin-bottom:5px;}
-.opname{color:var(--g);font-weight:600;font-size:13px;margin-bottom:16px;padding:8px 12px;background:var(--light);border-radius:8px;}
-.fg{margin-bottom:13px;}
-.fg label{display:block;font-size:13px;font-weight:700;color:var(--dg);margin-bottom:4px;}
-.fg input,.fg textarea,.fg select{width:100%;padding:10px 13px;border:1.5px solid #ddd;border-radius:9px;font-family:'Hind Siliguri',sans-serif;font-size:14px;outline:none;transition:.2s;}
-.fg input:focus,.fg textarea:focus{border-color:var(--g);}
-.fg textarea{height:70px;resize:vertical;}
-.qrow{display:flex;align-items:center;gap:10px;}
-.qbtn{width:34px;height:34px;border-radius:50%;border:2px solid var(--g);background:#fff;color:var(--g);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:bold;transition:.2s;}
-.qbtn:hover{background:var(--g);color:#fff;}
-#qn{font-size:18px;font-weight:700;color:var(--dg);min-width:28px;text-align:center;}
-.sbtn{width:100%;border:none;padding:12px;border-radius:10px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:15px;font-weight:700;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:8px;transition:.2s;}
-.sbtn.wa{background:linear-gradient(135deg,#25D366,#1da851);color:#fff;}
-.sbtn.em{background:linear-gradient(135deg,#ea4335,#c62828);color:#fff;margin-top:8px;}
-.admin-sec{display:none;background:linear-gradient(135deg,#f8f9fa,#e8f5e9);border-top:3px solid var(--gold);padding:30px 20px;}
-.admin-sec.on{display:block;}
-.atitle{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--dg);letter-spacing:3px;margin-bottom:6px;}
-.asub{color:#777;font-size:13px;margin-bottom:24px;}
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.afg.full{grid-column:1/-1;}
-.afg label{display:block;font-size:13px;font-weight:700;color:var(--dg);margin-bottom:4px;}
-.afg input,.afg textarea,.afg select{width:100%;padding:10px 13px;border:1.5px solid #c8dbc0;border-radius:9px;font-family:'Hind Siliguri',sans-serif;font-size:14px;outline:none;background:#fff;transition:.2s;}
-.afg input:focus,.afg textarea:focus{border-color:var(--g);}
-.afg textarea{height:82px;resize:vertical;}
-.upload-area{border:2px dashed var(--g);border-radius:12px;padding:18px;text-align:center;background:#fff;cursor:pointer;transition:.2s;}
-.upload-area:hover{background:var(--light);}
-.upload-area input{display:none;}
-.previews{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
-.prev-item{position:relative;width:70px;height:70px;border-radius:9px;overflow:hidden;border:2px solid var(--gold);}
-.prev-item img{width:100%;height:100%;object-fit:cover;}
-.prev-item .rmv{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:18px;height:18px;cursor:pointer;font-size:10px;display:flex;align-items:center;justify-content:center;}
-.add-btn{grid-column:1/-1;width:100%;background:linear-gradient(135deg,var(--g),var(--mg));color:#fff;border:none;padding:13px;border-radius:10px;cursor:pointer;font-family:'Hind Siliguri',sans-serif;font-size:15px;font-weight:700;margin-top:6px;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;}
-.ok-msg{background:#d4edda;border:1px solid var(--g);color:var(--dg);padding:10px 14px;border-radius:9px;margin-top:10px;font-size:14px;font-weight:700;display:none;}
-.alist{margin-top:26px;}
-.alist h4{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--dg);letter-spacing:2px;margin-bottom:14px;}
-.aitem{background:#fff;border-radius:11px;padding:12px 15px;margin-bottom:9px;display:flex;align-items:center;gap:13px;box-shadow:0 2px 10px rgba(10,74,46,.08);}
-.aitem-img{width:52px;height:52px;border-radius:9px;background:var(--light);display:flex;align-items:center;justify-content:center;font-size:26px;overflow:hidden;flex-shrink:0;}
-.aitem-img img{width:100%;height:100%;object-fit:cover;}
-.aitem-info{flex:1;}
-.aitem-name{font-weight:700;color:var(--dg);font-size:13px;}
-.aitem-price{color:var(--g);font-size:12px;font-weight:600;margin-top:2px;}
-.del-btn{background:#ffeaea;color:#c0392b;border:none;padding:5px 10px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:700;transition:.2s;}
-.del-btn:hover{background:#c0392b;color:#fff;}
-.csec{background:linear-gradient(135deg,var(--dg),var(--g));padding:50px 20px;text-align:center;border-top:3px solid var(--gold);}
-.csec h2{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#fff;letter-spacing:4px;margin-bottom:8px;}
-.csec p{color:rgba(255,255,255,.7);font-size:14px;margin-bottom:24px;}
-.cbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.cbtn{padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;display:flex;align-items:center;gap:9px;transition:.2s;}
-.cbtn:hover{transform:translateY(-3px);}
-.wa-c{background:#25D366;color:#fff;}
-.em-c{background:linear-gradient(135deg,#ea4335,#c62828);color:#fff;}
-footer{background:var(--dg);color:var(--cream);padding:40px 20px 18px;border-top:1px solid rgba(201,168,76,.3);}
-.fg4{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:28px;margin-bottom:28px;}
-.fc h4{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;margin-bottom:13px;color:var(--gold);border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:7px;}
-.fc p,.fc a{font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;line-height:2;display:block;}
-.fc a:hover{color:var(--cream);}
-.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:14px;text-align:center;font-size:11px;color:rgba(255,255,255,.4);}
-.fabs{position:fixed;bottom:20px;right:18px;display:flex;flex-direction:column;gap:10px;z-index:800;}
-.fab{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;border:none;cursor:pointer;font-size:20px;box-shadow:0 4px 18px rgba(0,0,0,.28);transition:.2s;}
-.fab:hover{transform:scale(1.12);}
-.fab-wa{background:linear-gradient(135deg,#25D366,#1da851);}
-.fab-em{background:linear-gradient(135deg,#ea4335,#c62828);}
-.adov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99999;align-items:center;justify-content:center;padding:20px;}
-.adov.on{display:flex;}
-.adbox{background:#fff;border-radius:22px;padding:38px 28px;max-width:320px;width:100%;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5);}
-.adbox-icon{font-size:54px;margin-bottom:14px;}
-.adbox h3{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--dg);letter-spacing:3px;margin-bottom:6px;}
-.adbox p{color:#999;font-size:13px;margin-bottom:22px;}
-.adpw-input{width:100%;padding:14px;border:2px solid #e0e0e0;border-radius:12px;font-size:16px;text-align:center;outline:none;transition:.2s;font-family:'Hind Siliguri',sans-serif;}
-.adpw-input:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(10,74,46,.1);}
-.adpw-input.err{border-color:#e53935;background:#fff5f5;}
-.ad-err{color:#e53935;font-size:12px;margin:8px 0 4px;display:none;font-weight:600;}
-.ad-ok-btn{width:100%;background:linear-gradient(135deg,var(--g),var(--mg));color:#fff;border:none;padding:14px;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;margin-top:12px;font-family:'Hind Siliguri',sans-serif;}
-.ad-cancel-btn{width:100%;background:#f5f5f5;color:#888;border:none;padding:12px;border-radius:12px;font-size:14px;cursor:pointer;margin-top:8px;font-family:'Hind Siliguri',sans-serif;}
-@media(max-width:580px){.hrow{padding:10px 13px;}.hero-title{font-size:62px;letter-spacing:10px;}.mgal{grid-template-columns:1fr;}.mthumbs{flex-direction:row;}.agrid{grid-template-columns:1fr;}.afg.full{grid-column:1;}}
+/* ===== VARIABLES ===== */
+:root {
+  --blue: #3fa9f5;
+  --blue-dark: #2193e0;
+  --green: #18392B;
+  --green-mid: #1f4d3a;
+  --brown: #775646;
+  --brown-light: #9a6b56;
+  --white: #ffffff;
+  --bg: #f0f4f8;
+  --light-blue: #e8f4fd;
+  --light-green: #e8f2ee;
+  --text: #1a1a1a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Hind Siliguri", sans-serif; background: var(--bg); color: var(--text); }
+
+/* ===== TOPBAR ===== */
+.topbar {
+  background: var(--green);
+  text-align: center;
+  padding: 7px 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  border-bottom: 2px solid var(--blue);
+  letter-spacing: 0.3px;
+}
+.topbar strong { color: var(--blue); }
+.topbar a { color: #fff; text-decoration: none; font-weight: 700; }
+.topbar a:hover { color: var(--blue); }
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}
+.hrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  flex-wrap: wrap;
+}
+.logo-link { text-decoration: none; display: flex; flex-direction: column; align-items: flex-start; }
+.logo-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 4px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.logo-name .leaf { color: var(--blue); font-size: 22px; }
+.logo-admins { font-size: 9px; color: rgba(255,255,255,0.5); letter-spacing: 1.5px; margin-top: 2px; }
+.srch {
+  flex: 1;
+  max-width: 440px;
+  display: flex;
+  background: rgba(255,255,255,0.12);
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  transition: 0.2s;
+}
+.srch:focus-within { border-color: var(--blue); background: rgba(255,255,255,0.18); }
+.srch input {
+  flex: 1;
+  padding: 9px 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 14px;
+}
+.srch input::placeholder { color: rgba(255,255,255,0.5); }
+.srch button {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+.srch button:hover { background: var(--blue-dark); }
+.hbtns { display: flex; gap: 7px; margin-left: auto; flex-wrap: wrap; align-items: center; }
+.hbtn {
+  background: rgba(255,255,255,0.1);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 7px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.hbtn:hover { background: rgba(255,255,255,0.22); }
+.hbtn-lang { background: rgba(63,169,245,0.25); border-color: var(--blue); color: var(--blue); }
+.hbtn-lang:hover { background: var(--blue); color: #fff; }
+.hbtn-admin { background: linear-gradient(135deg, var(--brown), var(--brown-light)); border-color: transparent; }
+.hbtn-admin:hover { background: linear-gradient(135deg, var(--brown-light), var(--brown)); }
+
+/* ===== NAV ===== */
+nav {
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  overflow-x: auto;
+  padding: 0 8px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+nav::-webkit-scrollbar { display: none; }
+nav a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+  display: block;
+}
+nav a:hover, nav a.on {
+  color: #fff;
+  border-bottom-color: var(--blue);
+  background: rgba(63,169,245,0.1);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(160deg, var(--green) 0%, var(--green-mid) 50%, #1a5c3a 100%);
+  padding: 56px 20px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(63,169,245,0.1) 0%, transparent 70%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--brown), var(--blue));
+}
+.hero-eyebrow { color: var(--blue); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px; position: relative; }
+.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 92px;
+  color: #fff;
+  letter-spacing: 14px;
+  line-height: 0.88;
+  position: relative;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.4);
+}
+.hero-title .dot { color: var(--blue); }
+.hero-sub {
+  color: rgba(255,255,255,0.78);
+  font-size: 15px;
+  margin: 16px 0 26px;
+  line-height: 1.7;
+  position: relative;
+}
+.hero-badges { display: flex; gap: 9px; justify-content: center; flex-wrap: wrap; position: relative; }
+.hbadge {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(63,169,245,0.3);
+  color: rgba(255,255,255,0.88);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: 0.2s;
+}
+.hbadge:hover { background: rgba(63,169,245,0.15); border-color: var(--blue); }
+
+/* ===== TICKER ===== */
+.ticker-wrap {
+  background: var(--green);
+  padding: 9px 0;
+  overflow: hidden;
+  border-top: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+.ticker { display: flex; gap: 36px; animation: tick 30s linear infinite; white-space: nowrap; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker span { font-family: "Bebas Neue", sans-serif; font-size: 14px; color: rgba(255,255,255,0.65); letter-spacing: 3px; }
+.ticker .tdot { color: var(--blue); font-size: 16px; }
+
+/* ===== FILTER BAR ===== */
+.fbar {
+  background: #fff;
+  padding: 11px 18px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dce8f0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.fb {
+  background: #f0f5fa;
+  border: 1.5px solid #ccdce8;
+  color: var(--green);
+  padding: 5px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.fb:hover, .fb.on { background: var(--blue); color: #fff; border-color: var(--blue); box-shadow: 0 2px 8px rgba(63,169,245,0.3); }
+
+/* ===== MAIN SECTION ===== */
+.main { padding: 26px 18px; }
+.sec-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  color: var(--green);
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sec-title::after { content: ""; flex: 1; height: 2px; background: linear-gradient(to right, var(--blue), transparent); }
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(218px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.pcard {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(24,57,43,0.09);
+  transition: 0.28s;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgba(63,169,245,0.08);
+}
+.pcard:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 36px rgba(24,57,43,0.16);
+  border-color: rgba(63,169,245,0.25);
+}
+.pbadge {
+  position: absolute;
+  top: 10px; left: 10px;
+  padding: 3px 9px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  z-index: 2;
+  color: #fff;
+}
+.badge-hot { background: linear-gradient(135deg, #e67e22, #d35400); }
+.badge-sale { background: linear-gradient(135deg, #e53935, #c62828); }
+.badge-new { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); }
+.badge-premium { background: linear-gradient(135deg, var(--brown), var(--brown-light)); }
+.badge-best { background: linear-gradient(135deg, var(--green), var(--green-mid)); }
+.pimg-wrap {
+  height: 188px;
+  background: linear-gradient(135deg, var(--light-blue), var(--light-green));
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 68px;
+  position: relative;
+}
+.pimg-wrap img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+.pcard:hover .pimg-wrap img { transform: scale(1.06); }
+.pdots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+.pdot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.45); border: 1.5px solid var(--blue); cursor: pointer; transition: 0.2s; }
+.pdot.on { background: var(--blue); }
+.pinfo { padding: 13px; }
+.pname { font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 4px; line-height: 1.3; }
+.pdesc { font-size: 11px; color: #777; margin-bottom: 9px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; }
+.ppr { display: flex; align-items: baseline; gap: 7px; margin-bottom: 4px; }
+.pprice { font-size: 19px; font-weight: 800; color: var(--green); }
+.pold { font-size: 12px; color: #bbb; text-decoration: line-through; }
+.pdel { font-size: 11px; color: #999; margin-bottom: 9px; }
+.btn-order {
+  width: 100%;
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
+  color: #fff;
+  border: none;
+  padding: 9px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.btn-order:hover { background: linear-gradient(135deg, #0f2a1f, var(--green)); }
+.btn-wa {
+  width: 100%;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #25D366, #1da851);
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+}
+.btn-wa:hover { opacity: 0.9; }
+
+/* ===== PRODUCT MODAL ===== */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.overlay.on { display: flex; }
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 820px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+}
+.modal-close {
+  position: absolute;
+  top: 12px; right: 14px;
+  background: rgba(0,0,0,0.07);
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #666;
+  z-index: 5;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.modal-close:hover { background: rgba(0,0,0,0.15); }
+.modal-body { padding: 22px; }
+.mgal { display: grid; grid-template-columns: 1fr 76px; gap: 10px; margin-bottom: 16px; }
+.mmain {
+  height: 295px;
+  border-radius: 12px;
+  background: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 88px;
+  overflow: hidden;
+}
+.mmain img { width: 100%; height: 100%; object-fit: cover; }
+.mthumbs { display: flex; flex-direction: column; gap: 7px; }
+.mthumb {
+  height: 66px;
+  border-radius: 8px;
+  background: #f0f5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+  overflow: hidden;
+}
+.mthumb img { width: 100%; height: 100%; object-fit: cover; }
+.mthumb.on { border-color: var(--blue); }
+.mname { font-family: "Bebas Neue", sans-serif; font-size: 26px; color: var(--green); letter-spacing: 1px; margin-bottom: 5px; }
+.mprice { font-size: 28px; font-weight: 800; color: var(--green); margin-bottom: 5px; }
+.mdel-info {
+  background: var(--light-blue);
+  border-radius: 9px;
+  padding: 9px 13px;
+  margin: 9px 0;
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(63,169,245,0.2);
+}
+.mdesc { font-size: 14px; color: #555; line-height: 1.75; margin-bottom: 14px; }
+.macts { display: flex; gap: 8px; flex-wrap: wrap; }
+.macts > * { flex: 1; min-width: 110px; }
+.btn-email {
+  flex: 1;
+  background: linear-gradient(135deg, #ea4335, #c62828);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.btn-email:hover { opacity: 0.9; }
+
+/* ===== ORDER MODAL ===== */
+.order-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.76);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.order-overlay.on { display: flex; }
+.order-form {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 455px;
+  width: 100%;
+  padding: 26px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+}
+.order-title { font-family: "Bebas Neue", sans-serif; font-size: 24px; color: var(--green); letter-spacing: 2px; margin-bottom: 4px; }
+.order-pname {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  background: var(--light-blue);
+  border-radius: 8px;
+  border-left: 3px solid var(--blue);
+}
+.fg { margin-bottom: 12px; }
+.fg label { display: block; font-size: 13px; font-weight: 700; color: var(--green); margin-bottom: 4px; }
+.fg input, .fg textarea, .fg select {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid #ddd;
+  border-radius: 9px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  background: #fafafa;
+}
+.fg input:focus, .fg textarea:focus { border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(63,169,245,0.1); }
+.fg textarea { height: 68px; resize: vertical; }
+.qty-row { display: flex; align-items: center; gap: 10px; }
+.qty-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+  background: #fff;
+  color: var(--blue);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.qty-btn:hover { background: var(--blue); color: #fff; }
+#qn { font-size: 18px; font-weight: 700; color: var(--green); min-width: 28px; text-align: center; }
+.submit-btn {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+.submit-wa { background: linear-gradient(135deg, #25D366, #1da851); color: #fff; }
+.submit-wa:hover { opacity: 0.9; }
+.submit-em { background: linear-gradient(135deg, #ea4335, #c62828); color: #fff; margin-top: 8px; }
+.submit-em:hover { opacity: 0.9; }
+
+/* ===== ADMIN PANEL ===== */
+.admin-panel {
+  display: none;
+  background: linear-gradient(135deg, #f8f9fa, var(--light-blue));
+  border-top: 3px solid var(--brown);
+  padding: 30px 20px;
+}
+.admin-panel.on { display: block; }
+.admin-title { font-family: "Bebas Neue", sans-serif; font-size: 28px; color: var(--green); letter-spacing: 3px; margin-bottom: 4px; }
+.admin-sub { color: #888; font-size: 13px; margin-bottom: 22px; }
+.admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.admin-grid .full { grid-column: 1/-1; }
+.admin-grid label { display: block; font-size: 13px; font-weight: 700; color: var(--green); margin-bottom: 4px; }
+.admin-grid input, .admin-grid textarea, .admin-grid select {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid #c5dce8;
+  border-radius: 9px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  transition: 0.2s;
+}
+.admin-grid input:focus, .admin-grid textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(63,169,245,0.1); }
+.admin-grid textarea { height: 80px; resize: vertical; }
+.upload-zone {
+  border: 2px dashed var(--blue);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.upload-zone:hover { background: var(--light-blue); }
+.upload-zone input { display: none; }
+.img-previews { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.prev-item { position: relative; width: 68px; height: 68px; border-radius: 9px; overflow: hidden; border: 2px solid var(--blue); }
+.prev-item img { width: 100%; height: 100%; object-fit: cover; }
+.prev-item .rmv {
+  position: absolute; top: 2px; right: 2px;
+  background: rgba(0,0,0,0.6);
+  color: #fff; border: none; border-radius: 50%;
+  width: 18px; height: 18px;
+  cursor: pointer; font-size: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.btn-add-product {
+  grid-column: 1/-1;
+  width: 100%;
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 5px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(24,57,43,0.25);
+}
+.btn-add-product:hover { background: linear-gradient(135deg, #0f2a1f, var(--green)); }
+.success-msg {
+  background: #d1ecf1;
+  border: 1px solid var(--blue);
+  color: var(--green);
+  padding: 10px 14px;
+  border-radius: 9px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  display: none;
+}
+.product-list { margin-top: 24px; }
+.product-list h4 { font-family: "Bebas Neue", sans-serif; font-size: 20px; color: var(--green); letter-spacing: 2px; margin-bottom: 12px; }
+.plist-item {
+  background: #fff;
+  border-radius: 11px;
+  padding: 11px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(24,57,43,0.07);
+  border: 1px solid rgba(63,169,245,0.1);
+}
+.plist-thumb {
+  width: 50px; height: 50px;
+  border-radius: 9px;
+  background: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.plist-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.plist-info { flex: 1; }
+.plist-name { font-weight: 700; color: var(--green); font-size: 13px; }
+.plist-price { color: var(--blue); font-size: 12px; font-weight: 600; margin-top: 2px; }
+.btn-delete {
+  background: #ffeaea;
+  color: #c0392b;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+.btn-delete:hover { background: #c0392b; color: #fff; }
+.btn-close-admin {
+  background: linear-gradient(135deg, var(--brown), var(--brown-light));
+  color: #fff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+.btn-close-admin:hover { opacity: 0.9; }
+
+/* ===== CONTACT ===== */
+.contact-sec {
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid var(--blue);
+}
+.contact-sec h2 { font-family: "Bebas Neue", sans-serif; font-size: 36px; color: #fff; letter-spacing: 4px; margin-bottom: 8px; }
+.contact-sec p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 24px; }
+.contact-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.cbtn {
+  padding: 13px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: 0.2s;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+.cbtn:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0,0,0,0.3); }
+.cbtn-wa { background: #25D366; color: #fff; }
+.cbtn-em { background: linear-gradient(135deg, #ea4335, #c62828); color: #fff; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--green);
+  color: #fff;
+  padding: 40px 20px 18px;
+  border-top: 2px solid rgba(63,169,245,0.25);
+}
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 26px; margin-bottom: 26px; }
+.footer-col h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: var(--blue);
+  border-bottom: 1px solid rgba(63,169,245,0.2);
+  padding-bottom: 6px;
+}
+.footer-col p, .footer-col a {
+  font-size: 13px;
+  color: rgba(255,255,255,0.58);
+  text-decoration: none;
+  line-height: 2;
+  display: block;
+}
+.footer-col a:hover { color: #fff; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ===== FLOATING BUTTONS ===== */
+.fabs {
+  position: fixed;
+  bottom: 20px; right: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 800;
+}
+.fab {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.26);
+  transition: 0.2s;
+}
+.fab:hover { transform: scale(1.12); }
+.fab-wa1 { background: linear-gradient(135deg, #25D366, #1da851); }
+.fab-wa2 { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); }
+.fab-em { background: linear-gradient(135deg, #ea4335, #c62828); }
+
+/* ===== ADMIN PASSWORD MODAL ===== */
+.pw-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.pw-overlay.on { display: flex; }
+.pw-box {
+  background: #fff;
+  border-radius: 22px;
+  padding: 38px 28px;
+  max-width: 310px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  border-top: 4px solid var(--brown);
+}
+.pw-icon { font-size: 50px; margin-bottom: 12px; }
+.pw-box h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 26px;
+  color: var(--green);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.pw-box p { color: #999; font-size: 13px; margin-bottom: 20px; }
+.pw-input {
+  width: 100%;
+  padding: 13px;
+  border: 2px solid #e0e0e0;
+  border-radius: 11px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: 0.2s;
+  font-family: "Hind Siliguri", sans-serif;
+  background: #fafafa;
+  letter-spacing: 2px;
+}
+.pw-input:focus { border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(63,169,245,0.12); }
+.pw-input.err { border-color: #e53935; background: #fff5f5; }
+.pw-error { color: #e53935; font-size: 12px; margin: 9px 0 4px; display: none; font-weight: 700; }
+.pw-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--brown), var(--brown-light));
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 12px;
+  font-family: "Hind Siliguri", sans-serif;
+  transition: 0.2s;
+  box-shadow: 0 4px 14px rgba(119,86,70,0.3);
+}
+.pw-submit:hover { background: linear-gradient(135deg, var(--brown-light), var(--brown)); }
+.pw-cancel {
+  width: 100%;
+  background: #f0f0f0;
+  color: #888;
+  border: none;
+  padding: 11px;
+  border-radius: 11px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-family: "Hind Siliguri", sans-serif;
+  transition: 0.2s;
+}
+.pw-cancel:hover { background: #e4e4e4; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .hrow { padding: 10px 12px; }
+  .hero-title { font-size: 58px; letter-spacing: 9px; }
+  .mgal { grid-template-columns: 1fr; }
+  .mthumbs { flex-direction: row; }
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-grid .full { grid-column: 1; }
+}
 </style>
 </head>
 <body>
 
-<div class="topbar">🌿 GROW BD — <span>সারাদেশে ডেলিভারি</span> | ✅ বিশ্বস্ত গাছের দোকান | 📞 <span>01713-666079</span></div>
-
-<header>
-<div class="hrow">
-  <a href="#" class="logo-wrap">
-    <div class="logo-box">GROW<small>BD</small></div>
-    <span class="logo-sub">গাছ · বীজ · প্রকৃতি</span>
-  </a>
-  <div class="srch">
-    <input type="text" id="si" placeholder="গাছ, বীজ বা সবজি খুঁজুন..." oninput="doSearch()">
-    <button>🔍</button>
-  </div>
-  <div class="hbtns">
-    <button class="hbtn" onclick="window.open('https://wa.me/8801608617196','_blank')">📱 WhatsApp</button>
-    <button class="hbtn" onclick="window.open('mailto:zznahian@gmail.com')">✉️ Email</button>
-    <button class="hbtn ab" id="adminBtn">⚙️ Admin</button>
-  </div>
+<!-- TOPBAR -->
+<div class="topbar">
+  🌿 GROW BD &nbsp;|&nbsp;
+  <strong>সারাদেশে ডেলিভারি</strong> &nbsp;|&nbsp;
+  📞 <a href="https://wa.me/8801713666079">01713-666079</a>
+  &nbsp;&amp;&nbsp;
+  <a href="https://wa.me/8801608617196">01608-617196</a>
 </div>
-<nav>
-  <a href="#" class="on" onclick="filterCat('all',this);return false;">🏠 সব পণ্য</a>
-  <a href="#" onclick="filterCat('fruit',this);return false;">🍎 ফল গাছ</a>
-  <a href="#" onclick="filterCat('vegetable',this);return false;">🥦 সবজি গাছ</a>
-  <a href="#" onclick="filterCat('seed',this);return false;">🌾 বীজ</a>
-  <a href="#" onclick="filterCat('special',this);return false;">⭐ অফার</a>
-  <a href="#contact">📞 যোগাযোগ</a>
-</nav>
+
+<!-- HEADER -->
+<header>
+  <div class="hrow">
+    <a href="#" class="logo-link">
+      <div class="logo-name">GROW BD <span class="leaf">🌿</span></div>
+      <div class="logo-admins">ADMIN-NAHIAN · ADMIN-BABON</div>
+    </a>
+    <div class="srch">
+      <input type="text" id="searchInput" placeholder="গাছ, বীজ বা সবজি খুঁজুন..." oninput="doSearch()">
+      <button onclick="doSearch()">🔍</button>
+    </div>
+    <div class="hbtns">
+      <a href="https://wa.me/8801713666079" target="_blank" class="hbtn">📱 01713</a>
+      <a href="https://wa.me/8801608617196" target="_blank" class="hbtn">📱 01608</a>
+      <button class="hbtn hbtn-lang" id="langBtn" onclick="toggleLang()">🌐 English</button>
+      <button class="hbtn hbtn-admin" id="adminOpenBtn">⚙️ Admin</button>
+    </div>
+  </div>
+  <nav id="mainNav">
+    <a href="#" class="on" data-cat="all" onclick="navClick(this);return false;">🏠 সব পণ্য</a>
+    <a href="#" data-cat="fruit-plant" onclick="navClick(this);return false;">🍎 ফল গাছ</a>
+    <a href="#" data-cat="veg-plant" onclick="navClick(this);return false;">🥦 সবজি গাছ</a>
+    <a href="#" data-cat="fruit-tree" onclick="navClick(this);return false;">🌳 ফল গাছ (বড়)</a>
+    <a href="#" data-cat="flower-plant" onclick="navClick(this);return false;">🌸 ফুল গাছ</a>
+    <a href="#" data-cat="fruit-seed" onclick="navClick(this);return false;">🌾 ফলের বীজ</a>
+    <a href="#" data-cat="veg-seed" onclick="navClick(this);return false;">🫘 সবজির বীজ</a>
+    <a href="#" data-cat="flower-seed" onclick="navClick(this);return false;">🌻 ফুলের বীজ</a>
+    <a href="#" data-cat="special" onclick="navClick(this);return false;">⭐ অফার</a>
+    <a href="#contact">📞 যোগাযোগ</a>
+  </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-eyebrow">🌱 Bangladesh's Premium Plant Store</div>
+  <div class="hero-eyebrow" id="heroEye">🌱 বাংলাদেশের সেরা অনলাইন গাছের দোকান</div>
   <div class="hero-title">GROW<span class="dot">.</span>BD</div>
-  <p class="hero-tag">ফল গাছ · সবজি গাছ · বীজ — সেরা মানে, সেরা দামে<br>সারাদেশে দ্রুত ডেলিভারি</p>
+  <p class="hero-sub" id="heroSub">ফল গাছ · সবজি গাছ · ফুল গাছ · বীজ<br>সেরা মানে, সেরা দামে — সারাদেশে ডেলিভারি</p>
   <div class="hero-badges">
-    <span class="hbadge">✅ অরিজিনাল গ্যারান্টি</span>
-    <span class="hbadge">🚚 দ্রুত ডেলিভারি</span>
-    <span class="hbadge">💬 WhatsApp অর্ডার</span>
-    <span class="hbadge">🌿 ৫০+ প্রজাতি</span>
+    <span class="hbadge" id="hb1">✅ অরিজিনাল গ্যারান্টি</span>
+    <span class="hbadge" id="hb2">🚚 দ্রুত ডেলিভারি</span>
+    <span class="hbadge" id="hb3">💬 WhatsApp অর্ডার</span>
+    <span class="hbadge" id="hb4">🌿 ১০০+ প্রজাতি</span>
   </div>
 </div>
 
+<!-- TICKER -->
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 
-<div class="fbar">
-  <label>🔽</label>
-  <button class="fb on" onclick="filterCat('all',this)">সব</button>
-  <button class="fb" onclick="filterCat('fruit',this)">ফল গাছ</button>
-  <button class="fb" onclick="filterCat('vegetable',this)">সবজি গাছ</button>
-  <button class="fb" onclick="filterCat('seed',this)">বীজ</button>
-  <button class="fb" onclick="filterCat('special',this)">অফার</button>
+<!-- FILTER -->
+<div class="fbar" id="filterBar">
+  <button class="fb on" data-cat="all" onclick="filterClick(this)">সব</button>
+  <button class="fb" data-cat="fruit-plant" onclick="filterClick(this)">ফল গাছ</button>
+  <button class="fb" data-cat="veg-plant" onclick="filterClick(this)">সবজি গাছ</button>
+  <button class="fb" data-cat="fruit-tree" onclick="filterClick(this)">ফল গাছ (বড়)</button>
+  <button class="fb" data-cat="flower-plant" onclick="filterClick(this)">ফুল গাছ</button>
+  <button class="fb" data-cat="fruit-seed" onclick="filterClick(this)">ফলের বীজ</button>
+  <button class="fb" data-cat="veg-seed" onclick="filterClick(this)">সবজির বীজ</button>
+  <button class="fb" data-cat="flower-seed" onclick="filterClick(this)">ফুলের বীজ</button>
+  <button class="fb" data-cat="special" onclick="filterClick(this)">অফার</button>
 </div>
 
+<!-- PRODUCTS -->
 <div class="main">
-  <div class="stitle" id="stitle">🌿 সব পণ্য</div>
-  <div class="pgrid" id="pgrid"></div>
+  <div class="sec-title" id="sectionTitle">🌿 সব পণ্য</div>
+  <div class="pgrid" id="productGrid"></div>
 </div>
 
-<div class="admin-sec" id="adminSec">
-  <div class="atitle">⚙️ Admin — পণ্য যোগ করুন</div>
-  <p class="asub">নিচের ফর্ম পূরণ করে সহজেই নতুন পণ্য যোগ করুন।</p>
-  <div class="agrid">
-    <div class="afg full"><label>পণ্যের নাম *</label><input type="text" id="an" placeholder="যেমন: আম গাছ (হাঁড়িভাঙ্গা)"></div>
-    <div class="afg"><label>দাম (৳) *</label><input type="number" id="ap" placeholder="350"></div>
-    <div class="afg"><label>পুরানো দাম</label><input type="number" id="aop" placeholder="500"></div>
-    <div class="afg"><label>ডেলিভারি চার্জ (৳) *</label><input type="number" id="ad" placeholder="80"></div>
-    <div class="afg"><label>ক্যাটাগরি *</label>
-      <select id="ac">
-        <option value="fruit">🍎 ফল গাছ</option>
-        <option value="vegetable">🥦 সবজি গাছ</option>
-        <option value="seed">🌾 বীজ</option>
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-title">⚙️ ADMIN PANEL</div>
+  <p class="admin-sub">নতুন পণ্য যোগ করুন — সর্বোচ্চ ৪টি ছবি দেওয়া যাবে।</p>
+  <div class="admin-grid">
+    <div class="full">
+      <label>পণ্যের নাম *</label>
+      <input type="text" id="a_name" placeholder="যেমন: আম গাছ (হাঁড়িভাঙ্গা)">
+    </div>
+    <div>
+      <label>দাম (৳) *</label>
+      <input type="number" id="a_price" placeholder="350" min="0">
+    </div>
+    <div>
+      <label>পুরানো দাম (ঐচ্ছিক)</label>
+      <input type="number" id="a_oldprice" placeholder="500" min="0">
+    </div>
+    <div>
+      <label>ডেলিভারি চার্জ (৳) *</label>
+      <input type="number" id="a_delivery" placeholder="80" min="0">
+    </div>
+    <div>
+      <label>ক্যাটাগরি *</label>
+      <select id="a_cat">
+        <option value="fruit-plant">🍎 ফল গাছ</option>
+        <option value="veg-plant">🥦 সবজি গাছ</option>
+        <option value="fruit-tree">🌳 ফল গাছ (বড়)</option>
+        <option value="flower-plant">🌸 ফুল গাছ</option>
+        <option value="fruit-seed">🌾 ফলের বীজ</option>
+        <option value="veg-seed">🫘 সবজির বীজ</option>
+        <option value="flower-seed">🌻 ফুলের বীজ</option>
         <option value="special">⭐ বিশেষ অফার</option>
       </select>
     </div>
-    <div class="afg"><label>ব্যাজ</label>
-      <select id="abg">
+    <div>
+      <label>ব্যাজ (ঐচ্ছিক)</label>
+      <select id="a_badge">
         <option value="">কোনো ব্যাজ নেই</option>
-        <option value="নতুন">নতুন</option>
-        <option value="হট">হট</option>
-        <option value="অফার">অফার</option>
-        <option value="বেস্টসেলার">বেস্টসেলার</option>
-        <option value="প্রিমিয়াম">প্রিমিয়াম</option>
+        <option value="new">নতুন</option>
+        <option value="hot">হট</option>
+        <option value="sale">অফার</option>
+        <option value="best">বেস্টসেলার</option>
+        <option value="premium">প্রিমিয়াম</option>
       </select>
     </div>
-    <div class="afg full"><label>বিবরণ *</label><textarea id="adesc" placeholder="পণ্যের বিস্তারিত বিবরণ..."></textarea></div>
-    <div class="afg full">
-      <label>ছবি (সর্বোচ্চ ৪টি)</label>
-      <div class="upload-area" onclick="document.getElementById('imgIn').click()">
-        <input type="file" id="imgIn" accept="image/*" multiple onchange="previewImgs(this)">
-        <div style="font-size:36px;margin-bottom:6px;">📸</div>
-        <div style="font-weight:700;color:var(--g);">ছবি বাছুন</div>
-        <div style="font-size:12px;color:#999;margin-top:4px;">JPG, PNG — সর্বোচ্চ ৪টি</div>
-      </div>
-      <div class="previews" id="prevs"></div>
+    <div class="full">
+      <label>বিবরণ *</label>
+      <textarea id="a_desc" placeholder="পণ্যের বিস্তারিত বিবরণ লিখুন..."></textarea>
     </div>
-    <button class="add-btn" onclick="addProduct()">➕ পণ্য যোগ করুন</button>
+    <div class="full">
+      <label>ছবি যোগ করুন (সর্বোচ্চ ৪টি)</label>
+      <div class="upload-zone" onclick="document.getElementById('a_imgs').click()">
+        <input type="file" id="a_imgs" accept="image/*" multiple onchange="handleImgUpload(this)">
+        <div style="font-size:36px;margin-bottom:6px;">📸</div>
+        <div style="font-weight:700;color:var(--blue);">ছবি বাছুন</div>
+        <div style="font-size:12px;color:#aaa;margin-top:4px;">JPG, PNG — সর্বোচ্চ ৪টি</div>
+      </div>
+      <div class="img-previews" id="imgPreviews"></div>
+    </div>
+    <button class="btn-add-product full" onclick="addProduct()">➕ পণ্য যোগ করুন</button>
   </div>
-  <div class="ok-msg" id="okMsg">✅ পণ্য সফলভাবে যোগ হয়েছে!</div>
-  <div class="alist"><h4>📋 বর্তমান পণ্য তালিকা</h4><div id="alist"></div></div>
+  <div class="success-msg" id="successMsg">✅ পণ্য সফলভাবে যোগ হয়েছে!</div>
+  <div class="product-list">
+    <h4>📋 বর্তমান পণ্য তালিকা</h4>
+    <div id="adminProductList"></div>
+  </div>
+  <button class="btn-close-admin" onclick="closeAdmin()">✕ Admin বন্ধ করুন</button>
 </div>
 
-<div class="csec" id="contact">
-  <h2>📞 যোগাযোগ করুন</h2>
-  <p>অর্ডার বা যেকোনো প্রশ্নের জন্য সরাসরি যোগাযোগ করুন</p>
-  <div class="cbtns">
-    <a class="cbtn wa-c" href="https://wa.me/8801608617196" target="_blank">📱 WhatsApp: 01713-666079</a>
-    <a class="cbtn em-c" href="/cdn-cgi/l/email-protection#7a0000141b12131b143a1d171b131654191517">✉️ <span class="__cf_email__" data-cfemail="d5afafbbb4bdbcb4bb95b2b8b4bcb9fbb6bab8">[email&#160;protected]</span></a>
+<!-- CONTACT -->
+<div class="contact-sec" id="contact">
+  <h2 id="contactTitle">📞 যোগাযোগ করুন</h2>
+  <p id="contactSub">অর্ডার বা যেকোনো প্রশ্নের জন্য সরাসরি যোগাযোগ করুন</p>
+  <div class="contact-btns">
+    <a class="cbtn cbtn-wa" href="https://wa.me/8801713666079" target="_blank">📱 WhatsApp: 01713-666079</a>
+    <a class="cbtn cbtn-wa" href="https://wa.me/8801608617196" target="_blank">📱 WhatsApp: 01608-617196</a>
+    <a class="cbtn cbtn-em" href="mailto:zznahian@gmail.com">✉️ zznahian@gmail.com</a>
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer>
-  <div class="fg4">
-    <div class="fc"><h4>GROW BD</h4><p>বাংলাদেশের বিশ্বস্ত অনলাইন গাছের দোকান।</p></div>
-    <div class="fc"><h4>ডেলিভারি</h4><a>ঢাকা: ৳৬০–৳৮০</a><a>ঢাকার বাইরে: ৳১০০–৳১৫০</a><a>সময়: ২–৫ কার্যদিবস</a></div>
-    <div class="fc"><h4>যোগাযোগ</h4><a href="https://wa.me/8801608617196">📱 01713-666079</a><a href="/cdn-cgi/l/email-protection#f98383979891909897b99e94989095d79a9694">✉️ <span class="__cf_email__" data-cfemail="552f2f3b343d3c343b153238343c397b363a38">[email&#160;protected]</span></a></div>
-    <div class="fc"><h4>সাহায্য</h4><a href="#">রিটার্ন পলিসি</a><a href="#">গাছের যত্ন গাইড</a><a href="#">সাধারণ প্রশ্ন</a></div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>GROW BD 🌿</h4>
+      <p id="footerAbout">বাংলাদেশের বিশ্বস্ত অনলাইন গাছের দোকান।</p>
+      <p style="color:rgba(255,255,255,0.35);font-size:11px;margin-top:6px;">ADMIN-NAHIAN · ADMIN-BABON</p>
+    </div>
+    <div class="footer-col">
+      <h4 id="footerDel">ডেলিভারি</h4>
+      <a>ঢাকা: ৳৬০–৳৮০</a>
+      <a>ঢাকার বাইরে: ৳১০০–৳১৫০</a>
+      <a>সময়: ২–৫ কার্যদিবস</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="footerContact">যোগাযোগ</h4>
+      <a href="https://wa.me/8801713666079">📱 01713-666079</a>
+      <a href="https://wa.me/8801608617196">📱 01608-617196</a>
+      <a href="mailto:zznahian@gmail.com">✉️ zznahian@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="footerHelp">সাহায্য</h4>
+      <a href="#" id="footerReturn">রিটার্ন পলিসি</a>
+      <a href="#" id="footerCare">গাছের যত্ন গাইড</a>
+      <a href="#" id="footerFaq">সাধারণ প্রশ্ন</a>
+    </div>
   </div>
-  <div class="fbot">© 2025 GROW BD | সর্বস্বত্ব সংরক্ষিত</div>
+  <div class="footer-bottom">© 2025 GROW BD 🌿 | ADMIN-NAHIAN · ADMIN-BABON</div>
 </footer>
 
+<!-- FLOATING BUTTONS -->
 <div class="fabs">
-  <a href="https://wa.me/8801608617196" target="_blank" class="fab fab-wa">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <a href="https://wa.me/8801713666079" target="_blank" class="fab fab-wa1" title="WhatsApp 01713">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
-  <a href="/cdn-cgi/l/email-protection#651f1f0b040d0c040b250208040c094b060a08" class="fab fab-em">✉️</a>
+  <a href="https://wa.me/8801608617196" target="_blank" class="fab fab-wa2" title="WhatsApp 01608">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a href="mailto:zznahian@gmail.com" class="fab fab-em" title="Email">✉️</a>
 </div>
 
-<div class="ov" id="pmodal">
+<!-- PRODUCT DETAIL MODAL -->
+<div class="overlay" id="productModal" onclick="if(event.target===this)closeProductModal()">
   <div class="modal">
-    <button class="mclose" onclick="closeModal()">✕</button>
-    <div class="mbody">
-      <div class="mgal"><div class="mmain" id="mmain"></div><div class="mthumbs" id="mthumbs"></div></div>
-      <div id="mcontent"></div>
+    <button class="modal-close" onclick="closeProductModal()">✕</button>
+    <div class="modal-body">
+      <div class="mgal">
+        <div class="mmain" id="modalMainImg"></div>
+        <div class="mthumbs" id="modalThumbs"></div>
+      </div>
+      <div id="modalContent"></div>
     </div>
   </div>
 </div>
 
-<div class="oov" id="omodal">
-  <div class="oform">
-    <button onclick="closeOrder()" style="position:absolute;top:14px;right:14px;background:rgba(0,0,0,.08);border:none;font-size:18px;cursor:pointer;color:#666;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;">✕</button>
-    <div class="otitle">🛒 অর্ডার করুন</div>
-    <div class="opname" id="opname"></div>
-    <div class="fg"><label>আপনার নাম *</label><input id="cn" placeholder="পুরো নাম"></div>
-    <div class="fg"><label>মোবাইল নম্বর *</label><input id="cp" placeholder="01XXXXXXXXX" type="tel"></div>
-    <div class="fg"><label>ঠিকানা *</label><textarea id="ca" placeholder="জেলা, উপজেলা সহ পূর্ণ ঠিকানা"></textarea></div>
-    <div class="fg"><label>পরিমাণ</label>
-      <div class="qrow">
-        <button class="qbtn" onclick="chQ(-1)">−</button>
+<!-- ORDER MODAL -->
+<div class="order-overlay" id="orderModal" onclick="if(event.target===this)closeOrderModal()">
+  <div class="order-form">
+    <button onclick="closeOrderModal()" style="position:absolute;top:13px;right:13px;background:rgba(0,0,0,0.07);border:none;font-size:17px;cursor:pointer;color:#666;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;">✕</button>
+    <div class="order-title">🛒 অর্ডার করুন</div>
+    <div class="order-pname" id="orderProductName"></div>
+    <div class="fg"><label>আপনার নাম *</label><input id="o_name" placeholder="পুরো নাম লিখুন" type="text"></div>
+    <div class="fg"><label>মোবাইল নম্বর *</label><input id="o_phone" placeholder="01XXXXXXXXX" type="tel"></div>
+    <div class="fg"><label>ঠিকানা *</label><textarea id="o_address" placeholder="জেলা, উপজেলা সহ পূর্ণ ঠিকানা"></textarea></div>
+    <div class="fg">
+      <label>পরিমাণ</label>
+      <div class="qty-row">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
         <span id="qn">1</span>
-        <button class="qbtn" onclick="chQ(1)">+</button>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+        <span style="font-size:12px;color:#aaa;margin-left:6px;">টি</span>
       </div>
     </div>
-    <div class="fg"><label>বিশেষ বার্তা</label><textarea id="cnote" placeholder="কোনো বিশেষ চাহিদা..."></textarea></div>
-    <button class="sbtn wa" onclick="sendWA()">📱 WhatsApp এ অর্ডার পাঠান</button>
-    <button class="sbtn em" onclick="sendEM()">✉️ Email এ অর্ডার পাঠান</button>
+    <div class="fg"><label>বিশেষ বার্তা (ঐচ্ছিক)</label><textarea id="o_note" placeholder="কোনো বিশেষ চাহিদা থাকলে লিখুন..."></textarea></div>
+    <button class="submit-btn submit-wa" onclick="submitWhatsApp()">📱 WhatsApp এ অর্ডার পাঠান</button>
+    <button class="submit-btn submit-em" onclick="submitEmail()">✉️ Email এ অর্ডার পাঠান</button>
   </div>
 </div>
 
-<div class="adov" id="adModal">
-  <div class="adbox">
-    <div class="adbox-icon">🔐</div>
-    <h3>Admin Panel</h3>
+<!-- ADMIN PASSWORD MODAL -->
+<div class="pw-overlay" id="pwModal" onclick="if(event.target===this)closePwModal()">
+  <div class="pw-box">
+    <div class="pw-icon">🔐</div>
+    <h3>ADMIN PANEL</h3>
     <p>পাসওয়ার্ড দিয়ে প্রবেশ করুন</p>
-    <input type="password" id="adPw" class="adpw-input" placeholder="পাসওয়ার্ড লিখুন" onkeydown="if(event.key==='Enter')adCheck()">
-    <div class="ad-err" id="adErr">❌ ভুল পাসওয়ার্ড!</div>
-    <button class="ad-ok-btn" onclick="adCheck()">✅ প্রবেশ করুন</button>
-    <button class="ad-cancel-btn" onclick="adClose()">বাতিল</button>
+    <input
+      type="password"
+      id="pwInput"
+      class="pw-input"
+      placeholder="••••••••••"
+      onkeydown="if(event.key==='Enter')checkPassword()"
+    >
+    <div class="pw-error" id="pwError">❌ ভুল পাসওয়ার্ড! আবার চেষ্টা করুন।</div>
+    <button class="pw-submit" onclick="checkPassword()">✅ প্রবেশ করুন</button>
+    <button class="pw-cancel" onclick="closePwModal()">বাতিল</button>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var products=[
-  {id:1,cat:'fruit',name:'আম গাছ (হাঁড়িভাঙ্গা)',desc:'রাজশাহীর বিখ্যাত হাঁড়িভাঙ্গা আমের কলম গাছ। ১-২ বছরের মধ্যে ফল দেবে।',price:350,oldPrice:500,delivery:80,badge:'হট',imgs:[],emojis:['🥭','🌳','🍀','🌿']},
-  {id:2,cat:'fruit',name:'পেয়ারা গাছ (থাই)',desc:'থাই পেয়ারা গাছ, সারা বছর ফল দেয়। ছাদ বাগানের জন্য আদর্শ।',price:280,oldPrice:null,delivery:80,badge:'নতুন',imgs:[],emojis:['🍐','🌱','🌿','🍃']},
-  {id:3,cat:'fruit',name:'লেবু গাছ (কাগজি)',desc:'কাগজি লেবু গাছ, সারা বছর ফল পাওয়া যায়।',price:150,oldPrice:200,delivery:60,badge:'অফার',imgs:[],emojis:['🍋','🌿','🌱','🍀']},
-  {id:4,cat:'vegetable',name:'টমেটো গাছ (হাইব্রিড)',desc:'হাইব্রিড টমেটো, অধিক ফলনশীল। ৬০-৭০ দিনে ফল পাওয়া যায়।',price:80,oldPrice:null,delivery:60,badge:null,imgs:[],emojis:['🍅','🌱','🌿','🍀']},
-  {id:5,cat:'vegetable',name:'মরিচ গাছ (বালিশ)',desc:'বালিশ মরিচ গাছ, ছাদ বাগানের জন্য জনপ্রিয়।',price:60,oldPrice:null,delivery:60,badge:null,imgs:[],emojis:['🌶️','🌿','🌱','🍃']},
-  {id:6,cat:'seed',name:'মিক্স সবজি বীজ প্যাক',desc:'১০ ধরনের সবজির বীজ এক প্যাকেটে।',price:120,oldPrice:180,delivery:40,badge:'বেস্টসেলার',imgs:[],emojis:['🌾','🫘','🌱','🌻']},
-  {id:7,cat:'fruit',name:'ড্রাগন ফ্রুট গাছ',desc:'ড্রাগন ফ্রুট কাটিং। ১.৫-২ বছরে ফল দেবে।',price:450,oldPrice:600,delivery:100,badge:'প্রিমিয়াম',imgs:[],emojis:['🌵','🌺','🌿','🍃']},
-  {id:8,cat:'special',name:'ছাদ বাগান স্টার্টার প্যাক',desc:'৫টি গাছ + বীজ + মাটি + সার কমপ্লিট প্যাকেজ।',price:800,oldPrice:1200,delivery:150,badge:'স্পেশাল',imgs:[],emojis:['🎁','🌱','🪴','🌿']}
+<script>
+// =============================================================
+// DATA
+// =============================================================
+var PRODUCTS = [
+  {id:1,cat:"fruit-plant",name:"আম গাছ (হাঁড়িভাঙ্গা)",desc:"রাজশাহীর বিখ্যাত হাঁড়িভাঙ্গা আমের কলম গাছ। ১-২ বছরের মধ্যে ফল দেবে।",price:350,oldPrice:500,delivery:80,badge:"hot",imgs:[],emojis:["🥭","🌳","🍀","🌿"]},
+  {id:2,cat:"fruit-plant",name:"পেয়ারা গাছ (থাই)",desc:"থাই পেয়ারা গাছ, সারা বছর ফল দেয়। ছাদ বাগানের জন্য আদর্শ।",price:280,oldPrice:null,delivery:80,badge:"new",imgs:[],emojis:["🍐","🌱","🌿","🍃"]},
+  {id:3,cat:"fruit-plant",name:"লেবু গাছ (কাগজি)",desc:"কাগজি লেবু গাছ, সারা বছর ফল পাওয়া যায়। টবে লাগানোর উপযোগী।",price:150,oldPrice:200,delivery:60,badge:"sale",imgs:[],emojis:["🍋","🌿","🌱","🍀"]},
+  {id:4,cat:"veg-plant",name:"টমেটো গাছ (হাইব্রিড)",desc:"হাইব্রিড টমেটো, অধিক ফলনশীল। ৬০-৭০ দিনে ফল পাওয়া যায়।",price:80,oldPrice:null,delivery:60,badge:"",imgs:[],emojis:["🍅","🌱","🌿","🍀"]},
+  {id:5,cat:"veg-plant",name:"মরিচ গাছ (বালিশ)",desc:"বালিশ মরিচ গাছ, ছাদ বাগানের জন্য জনপ্রিয়।",price:60,oldPrice:null,delivery:60,badge:"",imgs:[],emojis:["🌶️","🌿","🌱","🍃"]},
+  {id:6,cat:"fruit-tree",name:"নারকেল গাছ (উন্নত জাত)",desc:"উন্নত জাতের নারকেল গাছ। ৩-৪ বছরে ফল দেবে।",price:600,oldPrice:800,delivery:150,badge:"premium",imgs:[],emojis:["🥥","🌴","🌿","🍃"]},
+  {id:7,cat:"flower-plant",name:"গোলাপ গাছ (রেড কুইন)",desc:"সুন্দর লাল গোলাপ গাছ। সারা বছর ফুল দেয়।",price:120,oldPrice:null,delivery:60,badge:"new",imgs:[],emojis:["🌹","🌸","🌺","🌻"]},
+  {id:8,cat:"veg-seed",name:"মিক্স সবজি বীজ প্যাক",desc:"১০ ধরনের সবজির বীজ এক প্যাকেটে।",price:120,oldPrice:180,delivery:40,badge:"best",imgs:[],emojis:["🌾","🫘","🌱","🌻"]},
+  {id:9,cat:"fruit-plant",name:"ড্রাগন ফ্রুট গাছ",desc:"ড্রাগন ফ্রুট কাটিং। ১.৫-২ বছরে ফল দেবে।",price:450,oldPrice:600,delivery:100,badge:"premium",imgs:[],emojis:["🌵","🌺","🌿","🍃"]},
+  {id:10,cat:"flower-seed",name:"মিক্স ফুলের বীজ প্যাক",desc:"৮ রকমের ফুলের বীজ এক প্যাকেটে। সারা বছর ফুল পাবেন।",price:90,oldPrice:130,delivery:40,badge:"sale",imgs:[],emojis:["🌻","🌸","🌹","🌺"]},
+  {id:11,cat:"special",name:"ছাদ বাগান স্টার্টার প্যাক",desc:"৫টি গাছ + বীজ + মাটি + সার — কমপ্লিট প্যাকেজ।",price:800,oldPrice:1200,delivery:150,badge:"sale",imgs:[],emojis:["🎁","🌱","🪴","🌿"]}
 ];
-var nextId=20,curP=null,curQ=1,adminImgs=[];
 
-var tw=['GROW','🌿','BD','গাছ','বীজ','প্রকৃতি','PLANTS','SEEDS','NATURE','ফল','সবজি'];
-var t=document.getElementById('ticker');
-var ts=tw.map(function(w){return '<span>'+w+'</span><span class="dot"> · </span>';}).join('');
-t.innerHTML=ts+ts;
+var nextId = 50;
+var curProduct = null;
+var curQty = 1;
+var adminImages = [];
+var currentLang = "bn";
+var currentCat = "all";
 
-function imgEl(p,i){
-  var idx=i||0;
-  if(p.imgs&&p.imgs[idx])return '<img src="'+p.imgs[idx]+'" alt="">';
-  return '<span style="font-size:72px">'+(p.emojis&&p.emojis[idx]||'🌱')+'</span>';
+// Badge display text
+var BADGE_TEXT = {
+  "hot": {bn:"হট", en:"Hot"},
+  "new": {bn:"নতুন", en:"New"},
+  "sale": {bn:"অফার", en:"Sale"},
+  "best": {bn:"বেস্টসেলার", en:"Bestseller"},
+  "premium": {bn:"প্রিমিয়াম", en:"Premium"}
+};
+
+// Category labels
+var CAT_LABELS = {
+  "all":          {bn:"🌿 সব পণ্য",      en:"🌿 All Products"},
+  "fruit-plant":  {bn:"🍎 ফল গাছ",       en:"🍎 Fruit Plants"},
+  "veg-plant":    {bn:"🥦 সবজি গাছ",     en:"🥦 Veg Plants"},
+  "fruit-tree":   {bn:"🌳 ফল গাছ (বড়)", en:"🌳 Fruit Trees"},
+  "flower-plant": {bn:"🌸 ফুল গাছ",      en:"🌸 Flower Plants"},
+  "fruit-seed":   {bn:"🌾 ফলের বীজ",     en:"🌾 Fruit Seeds"},
+  "veg-seed":     {bn:"🫘 সবজির বীজ",    en:"🫘 Veg Seeds"},
+  "flower-seed":  {bn:"🌻 ফুলের বীজ",    en:"🌻 Flower Seeds"},
+  "special":      {bn:"⭐ বিশেষ অফার",   en:"⭐ Special Offers"}
+};
+
+// =============================================================
+// TICKER
+// =============================================================
+(function() {
+  var words = ["GROW BD","🌿","গাছ","বীজ","প্রকৃতি","PLANTS","SEEDS","ফল গাছ","সবজি গাছ","ফুল গাছ"];
+  var ticker = document.getElementById("ticker");
+  var s = words.map(function(w){ return "<span>"+w+"</span><span class='tdot'> · </span>"; }).join("");
+  ticker.innerHTML = s + s;
+})();
+
+// =============================================================
+// LANGUAGE
+// =============================================================
+function toggleLang() {
+  currentLang = currentLang === "bn" ? "en" : "bn";
+  var btn = document.getElementById("langBtn");
+  btn.textContent = currentLang === "bn" ? "🌐 English" : "🌐 বাংলা";
+  document.getElementById("searchInput").placeholder = currentLang === "bn" ? "গাছ, বীজ বা সবজি খুঁজুন..." : "Search plants, seeds...";
+  document.getElementById("heroEye").textContent = currentLang === "bn" ? "🌱 বাংলাদেশের সেরা অনলাইন গাছের দোকান" : "🌱 Bangladesh's Best Online Plant Store";
+  document.getElementById("heroSub").innerHTML = currentLang === "bn" ? "ফল গাছ · সবজি গাছ · ফুল গাছ · বীজ<br>সেরা মানে, সেরা দামে — সারাদেশে ডেলিভারি" : "Fruit Plants · Veg Plants · Flower Plants · Seeds<br>Best Quality, Best Price — Nationwide Delivery";
+  document.getElementById("hb1").textContent = currentLang === "bn" ? "✅ অরিজিনাল গ্যারান্টি" : "✅ Original Guarantee";
+  document.getElementById("hb2").textContent = currentLang === "bn" ? "🚚 দ্রুত ডেলিভারি" : "🚚 Fast Delivery";
+  document.getElementById("hb3").textContent = currentLang === "bn" ? "💬 WhatsApp অর্ডার" : "💬 WhatsApp Order";
+  document.getElementById("hb4").textContent = currentLang === "bn" ? "🌿 ১০০+ প্রজাতি" : "🌿 100+ Varieties";
+  document.getElementById("contactTitle").textContent = currentLang === "bn" ? "📞 যোগাযোগ করুন" : "📞 Contact Us";
+  document.getElementById("contactSub").textContent = currentLang === "bn" ? "অর্ডার বা যেকোনো প্রশ্নের জন্য সরাসরি যোগাযোগ করুন" : "Contact us directly for orders or any questions";
+  document.getElementById("footerAbout").textContent = currentLang === "bn" ? "বাংলাদেশের বিশ্বস্ত অনলাইন গাছের দোকান।" : "Bangladesh's trusted online plant store.";
+  document.getElementById("footerDel").textContent = currentLang === "bn" ? "ডেলিভারি" : "Delivery";
+  document.getElementById("footerContact").textContent = currentLang === "bn" ? "যোগাযোগ" : "Contact";
+  document.getElementById("footerHelp").textContent = currentLang === "bn" ? "সাহায্য" : "Help";
+  document.getElementById("footerReturn").textContent = currentLang === "bn" ? "রিটার্ন পলিসি" : "Return Policy";
+  document.getElementById("footerCare").textContent = currentLang === "bn" ? "গাছের যত্ন গাইড" : "Plant Care Guide";
+  document.getElementById("footerFaq").textContent = currentLang === "bn" ? "সাধারণ প্রশ্ন" : "FAQ";
+  // Update nav
+  var navLinks = {
+    "all": currentLang==="bn"?"🏠 সব পণ্য":"🏠 All",
+    "fruit-plant": currentLang==="bn"?"🍎 ফল গাছ":"🍎 Fruit Plants",
+    "veg-plant": currentLang==="bn"?"🥦 সবজি গাছ":"🥦 Veg Plants",
+    "fruit-tree": currentLang==="bn"?"🌳 ফল গাছ (বড়)":"🌳 Fruit Trees",
+    "flower-plant": currentLang==="bn"?"🌸 ফুল গাছ":"🌸 Flower Plants",
+    "fruit-seed": currentLang==="bn"?"🌾 ফলের বীজ":"🌾 Fruit Seeds",
+    "veg-seed": currentLang==="bn"?"🫘 সবজির বীজ":"🫘 Veg Seeds",
+    "flower-seed": currentLang==="bn"?"🌻 ফুলের বীজ":"🌻 Flower Seeds",
+    "special": currentLang==="bn"?"⭐ অফার":"⭐ Offers"
+  };
+  document.querySelectorAll("#mainNav a[data-cat]").forEach(function(a) {
+    var cat = a.getAttribute("data-cat");
+    if (navLinks[cat]) a.textContent = navLinks[cat];
+  });
+  // Update filter buttons
+  var fbLabels = {
+    "all": currentLang==="bn"?"সব":"All",
+    "fruit-plant": currentLang==="bn"?"ফল গাছ":"Fruit Plants",
+    "veg-plant": currentLang==="bn"?"সবজি গাছ":"Veg Plants",
+    "fruit-tree": currentLang==="bn"?"ফল গাছ (বড়)":"Fruit Trees",
+    "flower-plant": currentLang==="bn"?"ফুল গাছ":"Flower Plants",
+    "fruit-seed": currentLang==="bn"?"ফলের বীজ":"Fruit Seeds",
+    "veg-seed": currentLang==="bn"?"সবজির বীজ":"Veg Seeds",
+    "flower-seed": currentLang==="bn"?"ফুলের বীজ":"Flower Seeds",
+    "special": currentLang==="bn"?"অফার":"Offers"
+  };
+  document.querySelectorAll(".fb").forEach(function(b) {
+    var cat = b.getAttribute("data-cat");
+    if (fbLabels[cat]) b.textContent = fbLabels[cat];
+  });
+  document.getElementById("sectionTitle").textContent = CAT_LABELS[currentCat][currentLang];
+  renderProducts(getFilteredProducts());
 }
 
-function render(list){
-  var g=document.getElementById('pgrid');
-  if(!list||!list.length){g.innerHTML='<p style="grid-column:1/-1;text-align:center;color:#888;padding:40px;">কোনো পণ্য পাওয়া যায়নি।</p>';return;}
-  g.innerHTML=list.map(function(p){
-    var bc=p.badge==='হট'?'h':p.badge==='অফার'||p.badge==='বেস্টসেলার'?'s':p.badge==='প্রিমিয়াম'||p.badge==='স্পেশাল'?'p':'';
-    var dots='',cnt=Math.min(Math.max(p.imgs?p.imgs.length:0,p.emojis?p.emojis.length:1,1),4);
-    for(var i=0;i<cnt;i++)dots+='<div class="pdot'+(i===0?' on':'')+'" onclick="event.stopPropagation();swCard('+p.id+','+i+')"></div>';
-    return '<div class="pcard" onclick="openModal('+p.id+')">'
-      +(p.badge?'<div class="pbadge '+bc+'">'+p.badge+'</div>':'')
-      +'<div class="pimg-wrap" id="pi'+p.id+'-0">'+imgEl(p,0)+'</div>'
-      +'<div class="pdots">'+dots+'</div>'
-      +'<div class="pinfo"><div class="pname">'+p.name+'</div>'
-      +'<div class="pdesc">'+p.desc+'</div>'
-      +'<div class="ppr"><span class="pprice">৳'+p.price+'</span>'+(p.oldPrice?'<span class="pold">৳'+p.oldPrice+'</span>':'')+'</div>'
-      +'<div class="pdel">🚚 ডেলিভারি: ৳'+p.delivery+' | 📦 মোট: ৳'+(p.price+p.delivery)+'</div>'
-      +'<button class="bord" onclick="event.stopPropagation();openOrder('+p.id+')">🛒 অর্ডার করুন</button>'
-      +'<a class="bwa" href="https://wa.me/8801608617196?text='+encodeURIComponent('আমি '+p.name+' অর্ডার করতে চাই। দাম: ৳'+p.price)+'" target="_blank" onclick="event.stopPropagation()">📱 WhatsApp করুন</a>'
-      +'</div></div>';
-  }).join('');
+// =============================================================
+// IMAGE HELPER
+// =============================================================
+function getImg(p, idx) {
+  var i = idx || 0;
+  if (p.imgs && p.imgs[i]) return "<img src='" + p.imgs[i] + "' alt=''>";
+  var e = (p.emojis && p.emojis[i]) || "🌱";
+  return "<span style='font-size:70px'>" + e + "</span>";
 }
 
-function swCard(id,idx){var p=products.filter(function(x){return x.id===id;})[0];var el=document.getElementById('pi'+id+'-0');if(el)el.innerHTML=imgEl(p,idx);}
-
-function filterCat(cat,btn){
-  document.querySelectorAll('nav a,.fb').forEach(function(b){b.classList.remove('on');});
-  if(btn)btn.classList.add('on');
-  var labels={all:'🌿 সব পণ্য',fruit:'🍎 ফল গাছ',vegetable:'🥦 সবজি গাছ',seed:'🌾 বীজ',special:'⭐ বিশেষ অফার'};
-  document.getElementById('stitle').textContent=labels[cat]||'পণ্য';
-  render(cat==='all'?products:products.filter(function(p){return p.cat===cat;}));
+// =============================================================
+// RENDER PRODUCTS
+// =============================================================
+function renderProducts(list) {
+  var grid = document.getElementById("productGrid");
+  if (!list || !list.length) {
+    grid.innerHTML = "<p style='grid-column:1/-1;text-align:center;color:#aaa;padding:48px;font-size:16px;'>" + (currentLang==="bn"?"কোনো পণ্য পাওয়া যায়নি।":"No products found.") + "</p>";
+    return;
+  }
+  grid.innerHTML = list.map(function(p) {
+    var bt = p.badge && BADGE_TEXT[p.badge] ? BADGE_TEXT[p.badge][currentLang] : "";
+    var bc = p.badge ? "badge-" + p.badge : "";
+    var cnt = Math.min(Math.max(p.imgs ? p.imgs.length : 0, p.emojis ? p.emojis.length : 1, 1), 4);
+    var dots = "";
+    for (var i = 0; i < cnt; i++) {
+      dots += "<div class='pdot" + (i===0?" on":"") + "' onclick='event.stopPropagation();swapCardImg(" + p.id + "," + i + ")'></div>";
+    }
+    var wa1 = "https://wa.me/8801713666079?text=" + encodeURIComponent("আমি " + p.name + " অর্ডার করতে চাই। দাম: ৳" + p.price);
+    return "<div class='pcard' onclick='openProductModal(" + p.id + ")'>"
+      + (bt ? "<div class='pbadge " + bc + "'>" + bt + "</div>" : "")
+      + "<div class='pimg-wrap' id='cardimg" + p.id + "'>" + getImg(p, 0) + "</div>"
+      + "<div class='pdots'>" + dots + "</div>"
+      + "<div class='pinfo'>"
+      + "<div class='pname'>" + p.name + "</div>"
+      + "<div class='pdesc'>" + p.desc + "</div>"
+      + "<div class='ppr'><span class='pprice'>৳" + p.price + "</span>" + (p.oldPrice ? "<span class='pold'>৳" + p.oldPrice + "</span>" : "") + "</div>"
+      + "<div class='pdel'>🚚 ডেলিভারি: ৳" + p.delivery + " &nbsp;|&nbsp; 📦 মোট: ৳" + (p.price + p.delivery) + "</div>"
+      + "<button class='btn-order' onclick='event.stopPropagation();openOrderModal(" + p.id + ")'>🛒 অর্ডার করুন</button>"
+      + "<a class='btn-wa' href='" + wa1 + "' target='_blank' onclick='event.stopPropagation()'>📱 WhatsApp করুন</a>"
+      + "</div></div>";
+  }).join("");
 }
 
-function doSearch(){var q=document.getElementById('si').value.toLowerCase();render(products.filter(function(p){return p.name.toLowerCase().indexOf(q)>-1||p.desc.toLowerCase().indexOf(q)>-1;}));}
-
-function openModal(id){
-  curP=products.filter(function(x){return x.id===id;})[0];
-  document.getElementById('mmain').innerHTML=imgEl(curP,0);
-  var cnt=Math.min(Math.max(curP.imgs?curP.imgs.length:0,curP.emojis?curP.emojis.length:1,1),4),th='';
-  for(var i=0;i<cnt;i++)th+='<div class="mthumb'+(i===0?' on':'')+'" onclick="swThumb(this,'+i+')">'+imgEl(curP,i)+'</div>';
-  document.getElementById('mthumbs').innerHTML=th;
-  var op=curP.oldPrice?'<span style="font-size:15px;color:#bbb;text-decoration:line-through">৳'+curP.oldPrice+'</span>':'';
-  document.getElementById('mcontent').innerHTML='<div class="mname">'+curP.name+'</div>'
-    +'<div class="mprice">৳'+curP.price+' '+op+'</div>'
-    +'<div class="mdel"><span>🚚 ডেলিভারি: ৳'+curP.delivery+'</span><span>📦 মোট: ৳'+(curP.price+curP.delivery)+'</span><span>⏱️ ২-৫ কার্যদিবস</span></div>'
-    +'<div class="mdesc">'+curP.desc+'</div>'
-    +'<div class="macts"><button class="bord" onclick="closeModal();openOrder('+curP.id+')">🛒 অর্ডার</button>'
-    +'<a class="bwa" href="https://wa.me/8801608617196?text='+encodeURIComponent('পণ্য: '+curP.name)+'" target="_blank">📱 WhatsApp</a>'
-    +'<a class="bem" href="mailto:zznahian@gmail.com?subject='+encodeURIComponent(curP.name+' অর্ডার')+'">✉️ Email</a></div>';
-  document.getElementById('pmodal').classList.add('on');
+function swapCardImg(id, idx) {
+  var p = PRODUCTS.filter(function(x){ return x.id===id; })[0];
+  var el = document.getElementById("cardimg" + id);
+  if (el) el.innerHTML = getImg(p, idx);
+  var dots = el ? el.parentElement.querySelectorAll(".pdot") : [];
+  dots.forEach(function(d, i){ d.classList.toggle("on", i===idx); });
 }
 
-function swThumb(el,idx){document.querySelectorAll('.mthumb').forEach(function(t){t.classList.remove('on');});el.classList.add('on');document.getElementById('mmain').innerHTML=imgEl(curP,idx);}
-function closeModal(){document.getElementById('pmodal').classList.remove('on');}
-function openOrder(id){curP=products.filter(function(x){return x.id===id;})[0];curQ=1;document.getElementById('qn').textContent='1';document.getElementById('opname').textContent='📦 '+curP.name+' | ৳'+curP.price;['cn','cp','ca','cnote'].forEach(function(i){document.getElementById(i).value='';});document.getElementById('omodal').classList.add('on');}
-function closeOrder(){document.getElementById('omodal').classList.remove('on');}
-function chQ(d){curQ=Math.max(1,curQ+d);document.getElementById('qn').textContent=curQ;}
-
-function sendWA(){
-  var n=document.getElementById('cn').value.trim(),ph=document.getElementById('cp').value.trim(),a=document.getElementById('ca').value.trim();
-  if(!n||!ph||!a){alert('নাম, ফোন ও ঠিকানা দিন।');return;}
-  var tot=curP.price*curQ+curP.delivery;
-  var msg='🌿 নতুন অর্ডার — GROW BD\n\nপণ্য: '+curP.name+'\nমূল্য: ৳'+curP.price+' × '+curQ+' = ৳'+(curP.price*curQ)+'\nডেলিভারি: ৳'+curP.delivery+'\nমোট: ৳'+tot+'\n\nনাম: '+n+'\nফোন: '+ph+'\nঠিকানা: '+a;
-  window.open('https://wa.me/8801608617196?text='+encodeURIComponent(msg),'_blank');closeOrder();
-}
-function sendEM(){
-  var n=document.getElementById('cn').value.trim(),ph=document.getElementById('cp').value.trim(),a=document.getElementById('ca').value.trim();
-  if(!n||!ph||!a){alert('নাম, ফোন ও ঠিকানা দিন।');return;}
-  var tot=curP.price*curQ+curP.delivery;
-  window.open('mailto:zznahian@gmail.com?subject='+encodeURIComponent('অর্ডার: '+curP.name)+'&body='+encodeURIComponent('পণ্য: '+curP.name+'\nমোট: ৳'+tot+'\nনাম: '+n+'\nফোন: '+ph+'\nঠিকানা: '+a));closeOrder();
+// =============================================================
+// FILTER + SEARCH
+// =============================================================
+function getFilteredProducts() {
+  if (currentCat === "all") return PRODUCTS;
+  return PRODUCTS.filter(function(p){ return p.cat === currentCat; });
 }
 
-document.getElementById('adminBtn').addEventListener('click',function(){
-  document.getElementById('adModal').classList.add('on');
-  document.getElementById('adPw').value='';
-  document.getElementById('adPw').className='adpw-input';
-  document.getElementById('adErr').style.display='none';
-  setTimeout(function(){document.getElementById('adPw').focus();},200);
+function navClick(el) {
+  document.querySelectorAll("nav a").forEach(function(a){ a.classList.remove("on"); });
+  el.classList.add("on");
+  var cat = el.getAttribute("data-cat");
+  if (cat) setCategory(cat);
+}
+
+function filterClick(el) {
+  document.querySelectorAll(".fb").forEach(function(b){ b.classList.remove("on"); });
+  el.classList.add("on");
+  var cat = el.getAttribute("data-cat");
+  if (cat) setCategory(cat);
+}
+
+function setCategory(cat) {
+  currentCat = cat;
+  document.getElementById("sectionTitle").textContent = CAT_LABELS[cat][currentLang];
+  renderProducts(getFilteredProducts());
+}
+
+function doSearch() {
+  var q = document.getElementById("searchInput").value.toLowerCase().trim();
+  if (!q) { renderProducts(getFilteredProducts()); return; }
+  var res = PRODUCTS.filter(function(p){
+    return p.name.toLowerCase().indexOf(q) > -1 || p.desc.toLowerCase().indexOf(q) > -1;
+  });
+  document.getElementById("sectionTitle").textContent = currentLang==="bn" ? "🔍 খোঁজার ফলাফল" : "🔍 Search Results";
+  renderProducts(res);
+}
+
+// =============================================================
+// PRODUCT MODAL
+// =============================================================
+function openProductModal(id) {
+  curProduct = PRODUCTS.filter(function(x){ return x.id===id; })[0];
+  if (!curProduct) return;
+  document.getElementById("modalMainImg").innerHTML = getImg(curProduct, 0);
+  var cnt = Math.min(Math.max(curProduct.imgs?curProduct.imgs.length:0, curProduct.emojis?curProduct.emojis.length:1, 1), 4);
+  var thumbsHtml = "";
+  for (var i=0; i<cnt; i++) {
+    thumbsHtml += "<div class='mthumb" + (i===0?" on":"") + "' onclick='swapModalImg(" + i + ")'>" + getImg(curProduct, i) + "</div>";
+  }
+  document.getElementById("modalThumbs").innerHTML = thumbsHtml;
+  var op = curProduct.oldPrice ? "<span style='font-size:14px;color:#bbb;text-decoration:line-through;margin-left:8px;'>৳" + curProduct.oldPrice + "</span>" : "";
+  var wa1 = "https://wa.me/8801713666079?text=" + encodeURIComponent("পণ্য: " + curProduct.name);
+  document.getElementById("modalContent").innerHTML =
+    "<div class='mname'>" + curProduct.name + "</div>"
+    + "<div class='mprice'>৳" + curProduct.price + op + "</div>"
+    + "<div class='mdel-info'><span>🚚 ডেলিভারি: ৳" + curProduct.delivery + "</span><span>📦 মোট: ৳" + (curProduct.price+curProduct.delivery) + "</span><span>⏱️ ২-৫ কার্যদিবস</span></div>"
+    + "<div class='mdesc'>" + curProduct.desc + "</div>"
+    + "<div class='macts'>"
+    + "<button class='btn-order' onclick='closeProductModal();openOrderModal(" + curProduct.id + ")'>🛒 অর্ডার</button>"
+    + "<a class='btn-wa' href='" + wa1 + "' target='_blank'>📱 WhatsApp</a>"
+    + "<a class='btn-email' href='mailto:zznahian@gmail.com?subject=" + encodeURIComponent(curProduct.name+" অর্ডার") + "'>✉️ Email</a>"
+    + "</div>";
+  document.getElementById("productModal").classList.add("on");
+  document.body.style.overflow = "hidden";
+}
+
+function swapModalImg(idx) {
+  document.getElementById("modalMainImg").innerHTML = getImg(curProduct, idx);
+  document.querySelectorAll(".mthumb").forEach(function(t, i){ t.classList.toggle("on", i===idx); });
+}
+
+function closeProductModal() {
+  document.getElementById("productModal").classList.remove("on");
+  document.body.style.overflow = "";
+}
+
+// =============================================================
+// ORDER MODAL
+// =============================================================
+function openOrderModal(id) {
+  curProduct = PRODUCTS.filter(function(x){ return x.id===id; })[0];
+  if (!curProduct) return;
+  curQty = 1;
+  document.getElementById("qn").textContent = "1";
+  document.getElementById("orderProductName").textContent = "📦 " + curProduct.name + " — ৳" + curProduct.price;
+  document.getElementById("o_name").value = "";
+  document.getElementById("o_phone").value = "";
+  document.getElementById("o_address").value = "";
+  document.getElementById("o_note").value = "";
+  document.getElementById("orderModal").classList.add("on");
+  document.body.style.overflow = "hidden";
+}
+
+function closeOrderModal() {
+  document.getElementById("orderModal").classList.remove("on");
+  document.body.style.overflow = "";
+}
+
+function changeQty(d) {
+  curQty = Math.max(1, curQty + d);
+  document.getElementById("qn").textContent = curQty;
+}
+
+function submitWhatsApp() {
+  var name = document.getElementById("o_name").value.trim();
+  var phone = document.getElementById("o_phone").value.trim();
+  var addr = document.getElementById("o_address").value.trim();
+  if (!name || !phone || !addr) { alert("নাম, ফোন ও ঠিকানা দিন।"); return; }
+  var note = document.getElementById("o_note").value.trim();
+  var total = curProduct.price * curQty + curProduct.delivery;
+  var msg = "🌿 নতুন অর্ডার — GROW BD\n\nপণ্য: " + curProduct.name + "\nমূল্য: ৳" + curProduct.price + " × " + curQty + " = ৳" + (curProduct.price*curQty) + "\nডেলিভারি: ৳" + curProduct.delivery + "\nমোট: ৳" + total + "\n\nনাম: " + name + "\nফোন: " + phone + "\nঠিকানা: " + addr + (note ? "\nবার্তা: " + note : "");
+  window.open("https://wa.me/8801713666079?text=" + encodeURIComponent(msg), "_blank");
+  closeOrderModal();
+}
+
+function submitEmail() {
+  var name = document.getElementById("o_name").value.trim();
+  var phone = document.getElementById("o_phone").value.trim();
+  var addr = document.getElementById("o_address").value.trim();
+  if (!name || !phone || !addr) { alert("নাম, ফোন ও ঠিকানা দিন।"); return; }
+  var total = curProduct.price * curQty + curProduct.delivery;
+  window.open("mailto:zznahian@gmail.com?subject=" + encodeURIComponent("অর্ডার: " + curProduct.name) + "&body=" + encodeURIComponent("পণ্য: " + curProduct.name + "\nমোট: ৳" + total + "\nনাম: " + name + "\nফোন: " + phone + "\nঠিকানা: " + addr));
+  closeOrderModal();
+}
+
+// =============================================================
+// ADMIN PASSWORD — COMPLETELY NEW SYSTEM
+// =============================================================
+var ADMIN_PW = "growbd2025";
+
+// Attach admin button event AFTER page loads
+document.addEventListener("DOMContentLoaded", function() {
+  var adminBtn = document.getElementById("adminOpenBtn");
+  if (adminBtn) {
+    adminBtn.addEventListener("click", openPwModal);
+  }
+  renderProducts(PRODUCTS);
 });
-function adClose(){document.getElementById('adModal').classList.remove('on');}
-function adCheck(){
-  if(document.getElementById('adPw').value==='growbd2025'){
-    adClose();
-    var s=document.getElementById('adminSec');
-    s.classList.add('on');
-    s.scrollIntoView({behavior:'smooth'});
-    renderAdminList();
+
+function openPwModal() {
+  var modal = document.getElementById("pwModal");
+  var input = document.getElementById("pwInput");
+  var errTxt = document.getElementById("pwError");
+  modal.classList.add("on");
+  input.value = "";
+  input.className = "pw-input";
+  errTxt.style.display = "none";
+  document.body.style.overflow = "hidden";
+  setTimeout(function(){ input.focus(); }, 150);
+}
+
+function closePwModal() {
+  document.getElementById("pwModal").classList.remove("on");
+  document.body.style.overflow = "";
+}
+
+function checkPassword() {
+  var val = document.getElementById("pwInput").value;
+  var errTxt = document.getElementById("pwError");
+  if (val === ADMIN_PW) {
+    closePwModal();
+    openAdmin();
   } else {
-    document.getElementById('adErr').style.display='block';
-    document.getElementById('adPw').className='adpw-input err';
-    document.getElementById('adPw').value='';
+    errTxt.style.display = "block";
+    document.getElementById("pwInput").className = "pw-input err";
+    document.getElementById("pwInput").value = "";
+    document.getElementById("pwInput").focus();
   }
 }
 
-function previewImgs(input){
-  var files=Array.prototype.slice.call(input.files).slice(0,4);
-  adminImgs=[];document.getElementById('prevs').innerHTML='';
-  files.forEach(function(f,i){var r=new FileReader();r.onload=function(e){adminImgs[i]=e.target.result;var d=document.createElement('div');d.className='prev-item';d.innerHTML='<img src="'+e.target.result+'"><button class="rmv" onclick="removeImg('+i+')">✕</button>';document.getElementById('prevs').appendChild(d);};r.readAsDataURL(f);});
-}
-function removeImg(idx){adminImgs.splice(idx,1);var items=document.getElementById('prevs').children;if(items[idx])items[idx].remove();}
-
-function addProduct(){
-  var name=document.getElementById('an').value.trim(),price=parseInt(document.getElementById('ap').value)||0,oldP=parseInt(document.getElementById('aop').value)||null,del=parseInt(document.getElementById('ad').value)||0,cat=document.getElementById('ac').value,badge=document.getElementById('abg').value||null,desc=document.getElementById('adesc').value.trim();
-  if(!name||!price||!del||!desc){alert('নাম, দাম, ডেলিভারি ও বিবরণ দিন।');return;}
-  products.push({id:nextId++,cat:cat,name:name,desc:desc,price:price,oldPrice:oldP,delivery:del,badge:badge,imgs:adminImgs.slice(),emojis:['🌱','🌿','🍀','🌾']});
-  ['an','ap','aop','ad','adesc'].forEach(function(i){document.getElementById(i).value='';});
-  document.getElementById('abg').value='';document.getElementById('prevs').innerHTML='';document.getElementById('imgIn').value='';adminImgs=[];
-  var ok=document.getElementById('okMsg');ok.style.display='block';setTimeout(function(){ok.style.display='none';},3000);
-  render(products);renderAdminList();
+function openAdmin() {
+  var panel = document.getElementById("adminPanel");
+  panel.classList.add("on");
+  panel.scrollIntoView({ behavior: "smooth", block: "start" });
+  renderAdminList();
 }
 
-function renderAdminList(){
-  document.getElementById('alist').innerHTML=products.map(function(p){
-    return '<div class="aitem"><div class="aitem-img">'+(p.imgs&&p.imgs[0]?'<img src="'+p.imgs[0]+'">':(p.emojis&&p.emojis[0]||'🌱'))+'</div>'
-      +'<div class="aitem-info"><div class="aitem-name">'+p.name+'</div><div class="aitem-pri
+function closeAdmin() {
+  document.getElementById("adminPanel").classList.remove("on");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// =============================================================
+// ADMIN — PRODUCT MANAGEMENT
+// =============================================================
+function handleImgUpload(input) {
+  var files = Array.prototype.slice.call(input.files).slice(0, 4);
+  adminImages = [];
+  document.getElementById("imgPreviews").innerHTML = "";
+  files.forEach(function(file, i) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      adminImages[i] = e.target.result;
+      var div = document.createElement("div");
+      div.className = "prev-item";
+      div.innerHTML = "<img src='" + e.target.result + "'><button class='rmv' onclick='removeAdminImg(" + i + ")'>✕</button>";
+      document.getElementById("imgPreviews").appendChild(div);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function removeAdminImg(idx) {
+  adminImages.splice(idx, 1);
+  var items = document.getElementById("imgPreviews").children;
+  if (items[idx]) items[idx].remove();
+}
+
+function addProduct() {
+  var name = document.getElementById("a_name").value.trim();
+  var price = parseInt(document.getElementById("a_price").value) || 0;
+  var oldPrice = parseInt(document.getElementById("a_oldprice").value) || null;
+  var delivery = parseInt(document.getElementById("a_delivery").value) || 0;
+  var cat = document.getElementById("a_cat").value;
+  var badge = document.getElementById("a_badge").value;
+  var desc = document.getElementById("a_desc").value.trim();
+  if (!name || !price || !delivery || !desc) {
+    alert("পণ্যের নাম, দাম, ডেলিভারি চার্জ ও বিবরণ দিন।");
+    return;
+  }
+  var newProduct = {
+    id: nextId++,
+    cat: cat,
+    name: name,
+    desc: desc,
+    price: price,
+    oldPrice: oldPrice,
+    delivery: delivery,
+    badge: badge,
+    imgs: adminImages.slice(),
+    emojis: ["🌱","🌿","🍀","🌾"]
+  };
+  PRODUCTS.push(newProduct);
+  // Reset form
+  document.getElementById("a_name").value = "";
+  document.getElementById("a_price").value = "";
+  document.getElementById("a_oldprice").value = "";
+  document.getElementById("a_delivery").value = "";
+  document.getElementById("a_desc").value = "";
+  document.getElementById("a_badge").value = "";
+  document.getElementById("imgPreviews").innerHTML = "";
+  document.getElementById("a_imgs").value = "";
+  adminImages = [];
+  // Show success
+  var msg = document.getElementById("successMsg");
+  msg.style.display = "block";
+  setTimeout(function(){ msg.style.display = "none"; }, 3000);
+  // Refresh
+  renderProducts(getFilteredProducts());
+  renderAdminList();
+}
+
+function renderAdminList() {
+  var container = document.getElementById("adminProductList");
+  if (!PRODUCTS.length) {
+    container.innerHTML = "<p style='color:#aaa;text-align:center;padding:16px;'>কোনো পণ্য নেই।</p>";
+    return;
+  }
+  container.innerHTML = PRODUCTS.map(function(p) {
+    var bt = p.badge && BADGE_TEXT[p.badge] ? BADGE_TEXT[p.badge]["bn"] : "";
+    return "<div class='plist-item'>"
+      + "<div class='plist-thumb'>" + (p.imgs&&p.imgs[0] ? "<img src='" + p.imgs[0] + "'>" : (p.emojis&&p.emojis[0]||"🌱")) + "</div>"
+      + "<div class='plist-info'>"
+      + "<div class='plist-name'>" + p.name + (bt?" ["+bt+"]":"") + "</div>"
+      + "<div class='plist-price'>৳" + p.price + " | ডেলিভারি ৳" + p.delivery + " | " + p.cat + "</div>"
+      + "</div>"
+      + "<button class='btn-delete' onclick='deleteProduct(" + p.id + ")'>🗑 মুছুন</button>"
+      + "</div>";
+  }).join("");
+}
+
+function deleteProduct(id) {
+  if (!confirm("এই পণ্য মুছবেন?")) return;
+  PRODUCTS = PRODUCTS.filter(function(p){ return p.id !== id; });
+  renderProducts(getFilteredProducts());
+  renderAdminList();
+}
+
+// =============================================================
+// INIT — Run on load
+// =============================================================
+window.addEventListener("load", function() {
+  renderProducts(PRODUCTS);
+});
+</script>
+</body>
+</html>
